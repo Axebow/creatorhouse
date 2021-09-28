@@ -1,9 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Arimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,800;0,900;1,100;1,200;1,300;1,400;1,700;1,800&display=swap');
 
 :root{
-        --ft-def: 'Arimo', sans-serif;
+        --ft-def: 'Overpass', sans-serif;
 
-        --primary: #acf1f1;
+        --dark: #252525;
+        --light: #cfcfcf;
+        --white: #fcfcfc;
+        --black: #050505;
+
+        --primary: #fb8b24;
+        --blue: #0466c8;
+        --dark-blue: #001845;
+        --grey-blue: #33415c;
+        --sorta-grey: #7d8597;
+        --desaturated-blue: #0353a4;
+        --danger:#e5383b;
+        --success: #43aa8b;
+
 }
 
 *{
@@ -12,23 +25,16 @@
 
 /* THEMES */
 .light{
-        background-color: #FFFFFF;
+        background-color: var(--light);
+        color: var(--black);
 }
 
 .dark{
-        background-color: #252525;
-        color: #fafafa;
+        background-color: var(--dark);
+        color: var(--white);
 }
 
 /* theme support */
-
-.light .custom-nav-theme{
-        background: #fafafa;
-}
-
-.dark .custom-nav-theme{
-        background: #252525;
-}
 
 
 /* basic */
@@ -41,13 +47,35 @@
         color: inherit;
 }
 
+.fullscreen{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+}
+
+#themeSelector{
+        cursor: pointer;
+}
+
+#themeSelector:hover{
+        color: var(--primary);
+}
+
 /* custom overrides for bootstrap */
 
+.custom-nav-theme{
+        background-color: var(--dark);
+        color: var(--white);
+}
+
 .custom-nav-theme .nav-link{
-        color: inherit;
-        text-decoration: none;
+        color: inherit !important;
+        border-radius: 10px;
 }
 
 .custom-nav-theme .nav-link:hover{
-        color: var(--primary);
+        background-color: var(--primary) !important;
+        color: var(var(--light)) !important;
 }
