@@ -2,8 +2,10 @@ if(localStorage.getItem('theme')!==undefined){
         const theme = localStorage.getItem('theme');
         document.getElementById('main').className = theme;
         if(theme==='light'){
+                document.getElementById('theme-container').innerHTML="Switch to dark";
         }
         else if(theme==='dark'){
+                document.getElementById('theme-container').innerHTML="Switch to light";
         }
     }
     else{
@@ -15,9 +17,11 @@ if(localStorage.getItem('theme')!==undefined){
         if(element.className==='light'){
             element.className='dark';
             localStorage.setItem('theme', 'dark');
+            document.getElementById('theme-container').innerHTML="Switch to light";
         }
         else{
             element.className='light';
             localStorage.setItem('theme', 'light');
+            document.getElementById('theme-container').innerHTML="Switch to dark";
         }
     }

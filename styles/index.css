@@ -27,11 +27,13 @@
 .light{
         background-color: var(--light);
         color: var(--black);
+        transition: all 150ms linear;
 }
 
 .dark{
         background-color: var(--dark);
         color: var(--white);
+        transition: all 150ms linear;
 }
 
 /* theme support */
@@ -63,6 +65,16 @@
         color: var(--primary);
 }
 
+.theme-container{
+        display: none;
+}
+
+.inline{
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+}
+
 /* custom overrides for bootstrap */
 
 .custom-nav-theme{
@@ -78,4 +90,16 @@
 .custom-nav-theme .nav-link:hover{
         background-color: var(--primary) !important;
         color: var(var(--light)) !important;
+}
+
+@media screen and (max-width:1000px) {
+        .theme-container{
+                display: block;
+                margin-left: 10px;
+        }
+
+        .nav-link{
+                padding: 10px 20px !important;
+                margin: 5px auto;
+        }
 }
