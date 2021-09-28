@@ -2,8 +2,52 @@
 
 :root{
         --ft-def: 'Arimo', sans-serif;
+
+        --primary: #acf1f1;
 }
 
 *{
         font-family: var(--ft-def);
+}
+
+/* THEMES */
+.light{
+        background-color: #FFFFFF;
+}
+
+.dark{
+        background-color: #252525;
+        color: #fafafa;
+}
+
+/* theme support */
+
+.light .custom-nav-theme{
+        background: #fafafa;
+}
+
+.dark .custom-nav-theme{
+        background: #252525;
+}
+
+
+/* basic */
+
+.not-a-link{
+        color: inherit;
+}
+
+.not-a-link:hover{
+        color: inherit;
+}
+
+/* custom overrides for bootstrap */
+
+.custom-nav-theme .nav-link{
+        color: inherit;
+        text-decoration: none;
+}
+
+.custom-nav-theme .nav-link:hover{
+        color: var(--primary);
 }
