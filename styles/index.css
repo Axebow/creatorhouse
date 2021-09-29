@@ -19,6 +19,18 @@
 
 }
 
+html{
+        scroll-behavior: smooth;
+        overflow: scroll;
+        overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+        width: 0;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+
+
 *{
         font-family: var(--ft-def);
 }
@@ -75,6 +87,49 @@
         padding: 10px 0;
 }
 
+.navcircles{
+        position: fixed;
+        top: 45%;
+        right: 1em;
+}
+
+.navcircles a{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        align-items: center;
+        text-decoration: none;
+        color: var(--sorta-grey);
+}
+
+.navcircles .label{
+        opacity: 0;
+        transition: opacity 100ms linear;
+        margin-right: 1em;
+        display: flex;
+        justify-content: end;
+}
+
+.navcircles a:hover{
+        color: var(--desaturated-blue);
+}
+
+.navcircles a:hover .navcircle{
+        background-color: var(--blue);
+}
+
+.navcircles:hover .label{
+        opacity: 1;
+}
+
+.navcircles .navcircle{
+        cursor: pointer;
+        width: 1em;
+        height: 1em;
+        border-radius: 1em;
+        background-color: var(--sorta-grey);
+        margin: 10px auto;
+}
+
 /* custom overrides for bootstrap */
 
 .custom-nav-theme{
@@ -90,6 +145,10 @@
 .custom-nav-theme .nav-link:hover{
         background-color: var(--primary) !important;
         color: var(var(--light)) !important;
+}
+
+.active{
+        background-color: var(--sorta-grey) !important;
 }
 
 @media screen and (max-width:1000px) {
