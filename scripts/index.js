@@ -1,4 +1,8 @@
-if(localStorage.getItem('theme')!==undefined){
+if(localStorage.getItem("cookiepolicy")!==null){
+    document.getElementById("popup").style.display = "none";
+}
+
+if(localStorage.getItem('theme')!==null){
         const theme = localStorage.getItem('theme');
         document.getElementById('main').className = theme;
         if(theme==='light'){
@@ -30,3 +34,8 @@ var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
     var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
       return new bootstrap.Popover(popoverTriggerEl)
 })
+
+function hidePopup(){
+    document.getElementById("popup").style.display = "none";
+    localStorage.setItem("cookiepolicy", true)
+}

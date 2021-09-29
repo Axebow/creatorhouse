@@ -42,10 +42,20 @@ html{
         transition: all 150ms linear;
 }
 
+.light .popup{
+        background-color: var(--light);
+        border: 3px solid var(--dark);
+}
+
 .dark{
         background-color: var(--dark);
         color: var(--white);
         transition: all 150ms linear;
+}
+
+.dark .popup{
+        background-color: var(--dark);
+        border: 3px solid var(--light);
 }
 
 /* theme support */
@@ -130,6 +140,36 @@ html{
         margin: 10px auto;
 }
 
+.popup{
+        position: fixed;
+        padding: 1em;
+        bottom: 1em;
+        right: 1em;
+        border-radius: 1em;
+}
+
+.popup div{
+        font-weight: 700;
+}
+
+.popup span{
+        font-size: 80%;
+}
+
+.button{
+        border-radius: 10px;
+        outline: none; 
+        border: none;
+        font-size: 80%;
+        background-color: var(--sorta-grey);
+        color: var(--white);
+        font-weight: 500;
+}
+
+.button:hover{
+        opacity: 0.5;
+}
+
 /* custom overrides for bootstrap */
 
 .custom-nav-theme{
@@ -164,5 +204,12 @@ html{
 
         .navcircles{
                 display: none;
+        }
+
+        .popup{
+                right: 10%;
+                width: 80%;
+                margin: auto;
+                text-align: center;
         }
 }
